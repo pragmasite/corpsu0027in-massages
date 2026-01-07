@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700&family=Inter:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here.
+All colors MUST be HSL.
+Wellness/Spa Theme: Teal primary with warm accent tones
+*/
+
+@layer base {
+  :root {
+    --background: 160 40% 97%;
+    --foreground: 160 20% 18%;
+
+    --card: 160 35% 95%;
+    --card-foreground: 160 20% 18%;
+
+    --popover: 160 35% 95%;
+    --popover-foreground: 160 20% 18%;
+
+    --primary: 165 65% 32%;
+    --primary-foreground: 160 40% 97%;
+
+    --secondary: 35 80% 88%;
+    --secondary-foreground: 160 20% 25%;
+
+    --muted: 160 25% 92%;
+    --muted-foreground: 160 15% 50%;
+
+    --accent: 28 85% 55%;
+    --accent-foreground: 160 40% 97%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 160 20% 88%;
+    --input: 160 20% 88%;
+    --ring: 165 65% 32%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 160 35% 95%;
+    --sidebar-foreground: 160 20% 25%;
+    --sidebar-primary: 165 65% 32%;
+    --sidebar-primary-foreground: 160 40% 97%;
+    --sidebar-accent: 35 80% 88%;
+    --sidebar-accent-foreground: 160 20% 25%;
+    --sidebar-border: 160 20% 88%;
+    --sidebar-ring: 165 65% 32%;
+
+    --shadow-soft: 0 4px 20px -4px hsl(165 65% 32% / 0.1);
+    --shadow-medium: 0 8px 30px -6px hsl(165 65% 32% / 0.15);
+  }
+
+  .dark {
+    --background: 160 20% 12%;
+    --foreground: 160 30% 92%;
+
+    --card: 160 20% 16%;
+    --card-foreground: 160 30% 92%;
+
+    --popover: 160 20% 16%;
+    --popover-foreground: 160 30% 92%;
+
+    --primary: 165 70% 50%;
+    --primary-foreground: 160 20% 12%;
+
+    --secondary: 35 80% 70%;
+    --secondary-foreground: 160 20% 16%;
+
+    --muted: 160 20% 30%;
+    --muted-foreground: 160 15% 65%;
+
+    --accent: 28 85% 55%;
+    --accent-foreground: 160 20% 12%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 160 20% 25%;
+    --input: 160 20% 25%;
+    --ring: 165 70% 50%;
+    --sidebar-background: 160 20% 12%;
+    --sidebar-foreground: 160 30% 92%;
+    --sidebar-primary: 165 70% 50%;
+    --sidebar-primary-foreground: 160 20% 12%;
+    --sidebar-accent: 35 80% 70%;
+    --sidebar-accent-foreground: 160 20% 12%;
+    --sidebar-border: 160 20% 25%;
+    --sidebar-ring: 165 70% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cormorant Garamond', serif;
+  }
+}
